@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Speco Dashboard | Premium Curator</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#e4e9ed",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "on-secondary-container": "#454386",
+                        "tertiary-container": "#a44100",
+                        "secondary": "#58579b",
+                        "on-tertiary-fixed": "#351000",
+                        "on-primary-fixed": "#0f0069",
+                        "secondary-container": "#b6b4ff",
+                        "primary-container": "#4f46e5",
+                        "surface-container-highest": "#dfe3e7",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#ffdbcc",
+                        "on-secondary-fixed-variant": "#413f82",
+                        "on-tertiary-fixed-variant": "#7b2f00",
+                        "outline": "#777587",
+                        "inverse-surface": "#2c3134",
+                        "surface-container-low": "#f0f4f8",
+                        "surface-bright": "#f6fafe",
+                        "on-primary": "#ffffff",
+                        "on-background": "#171c1f",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#dfe3e7",
+                        "on-primary-container": "#dad7ff",
+                        "primary-fixed": "#e2dfff",
+                        "on-surface": "#171c1f",
+                        "surface-dim": "#d6dade",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#e2dfff",
+                        "on-secondary-fixed": "#140f54",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f6fafe",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#c3c0ff",
+                        "outline-variant": "#c7c4d8",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "background": "#f6fafe",
+                        "primary": "#3525cd",
+                        "surface-tint": "#4d44e3",
+                        "surface-container": "#eaeef2",
+                        "inverse-on-surface": "#edf1f5",
+                        "tertiary": "#7e3000",
+                        "on-surface-variant": "#464555",
+                        "on-tertiary-container": "#ffd2be",
+                        "primary-fixed-dim": "#c3c0ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- SideNavBar (Shared Component) -->
+<aside class="h-full w-64 fixed left-0 top-0 hidden lg:flex flex-col bg-slate-50 dark:bg-slate-950 flex flex-col gap-2 p-6 border-r border-slate-100 dark:border-slate-800 z-50">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+</div>
+<div>
+<h1 class="text-xl font-bold text-indigo-700 dark:text-indigo-400">Speco</h1>
+<p class="text-[10px] uppercase tracking-wider text-slate-500 font-medium">Premium Curator</p>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<!-- Active State: Dashboard maps to Home intent -->
+<a class="bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 rounded-xl px-4 py-3 font-medium flex items-center gap-3 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span>Home</span>
+</a>
+<a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-xl flex items-center gap-3 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
+<span>Projects</span>
+</a>
+<a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-xl flex items-center gap-3 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+<a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-xl flex items-center gap-3 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+<span>Support</span>
+</a>
+<a class="text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-xl flex items-center gap-3 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span>Billing</span>
+</a>
+</nav>
+<div class="mt-auto p-4 bg-surface-container-low rounded-2xl">
+<p class="text-xs font-semibold text-on-surface mb-2">Pro Plan</p>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mb-3">
+<div class="bg-primary w-3/4 h-full rounded-full"></div>
+</div>
+<p class="text-[10px] text-on-surface-variant">75% of projects used</p>
+</div>
+</aside>
+<!-- TopAppBar (Shared Component) -->
+<header class="bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl docked full-width top-0 sticky z-40 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto lg:pl-72">
+<div class="flex items-center gap-6">
+<span class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50 lg:hidden">Speco</span>
+<div class="relative hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-lowest border-none rounded-xl text-sm focus:ring-2 focus:ring-primary/20 w-64" placeholder="Search projects..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex gap-6 mr-6">
+<a class="text-indigo-700 dark:text-indigo-400 font-semibold border-b-2 border-indigo-600 pb-1" href="#">Dashboard</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" href="#">Projects</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" href="#">Analytics</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" href="#">Team</a>
+</div>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-xl text-sm font-semibold hover:bg-primary-container transition-all active:scale-95 duration-150 ease-in-out">Create New</button>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="Close-up portrait of a professional woman with a friendly expression in a brightly lit modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdVwNO1s6CU4Y-aF_E2J7MvaHIqlCud4odj1IVbcFvr7vfrGGqrrgctgFk6PIw7I8T4Kzu7mwMlllXdIwue6Vnh0ktAGsegnrJd4cQj08yuRGUP_N7NfpHlfQQV0iY-Fg3ws4kExYevLV2SGbk9IjyFsumJzFf15goiZeZ7DEAp8JPRfkG9VBZULgnKzj73iKCMLy5loPyCcrVC1BCB8Epb3K9TayBO6k8w22MMXJHl0sPcN9G6Bfp6N7dLDhjq5Oli00yTObvvmA"/>
+</div>
+</div>
+</div>
+</header>
+<main class="lg:ml-64 p-8 lg:p-12 max-w-screen-2xl mx-auto">
+<!-- Hero / Action Section -->
+<section class="mb-16">
+<div class="relative overflow-hidden rounded-2xl p-1 bg-gradient-to-br from-cyan-400/20 via-primary/10 to-indigo-500/20">
+<div class="relative bg-surface-container-lowest/80 backdrop-blur-md rounded-[1.4rem] p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="flex-1 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-xs font-bold uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                            AI Powered
+                        </div>
+<h2 class="text-4xl md:text-5xl font-bold tracking-tight text-on-surface">Create New Project</h2>
+<p class="text-lg text-on-surface-variant max-w-xl">Start generating your Functional Requirements Document with our advanced AI curator. Transform ideas into structured modules in minutes.</p>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-2xl text-lg font-bold shadow-xl shadow-primary/20 hover:translate-y-[-2px] transition-all active:scale-95">
+                            Create Project
+                        </button>
+</div>
+<div class="hidden md:block w-72 h-72 relative">
+<div class="absolute inset-0 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="relative flex items-center justify-center w-full h-full">
+<span class="material-symbols-outlined text-[120px] text-primary" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="mb-16">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-2xl font-semibold text-on-surface">Recent Projects</h3>
+<button class="text-primary font-medium hover:underline flex items-center gap-1">
+                    View All <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- Card 1: Completed -->
+<div class="group bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 relative border border-transparent hover:border-primary/10">
+<div class="flex justify-between items-start mb-6">
+<div class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-[10px] font-bold uppercase tracking-widest">Completed</div>
+<button class="text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">E-commerce Redesign</h4>
+<p class="text-on-surface-variant text-sm mb-8 line-clamp-2">Full platform overhaul including checkout flow, multi-currency support, and inventory tracking.</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-xs text-on-surface-variant font-medium">Created Oct 12, 2023</span>
+<button class="bg-surface-container-high text-on-surface px-4 py-2 rounded-xl text-sm font-semibold hover:bg-primary hover:text-on-primary transition-colors">Open</button>
+</div>
+</div>
+<!-- Card 2: In Progress -->
+<div class="group bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 relative border border-transparent hover:border-primary/10">
+<div class="flex justify-between items-start mb-6">
+<div class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-[10px] font-bold uppercase tracking-widest">In Progress</div>
+<button class="text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Healthcare Dashboard</h4>
+<p class="text-on-surface-variant text-sm mb-8 line-clamp-2">HIPAA compliant patient management system with real-time vitals monitoring integrations.</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-xs text-on-surface-variant font-medium">Created Nov 04, 2023</span>
+<button class="bg-surface-container-high text-on-surface px-4 py-2 rounded-xl text-sm font-semibold hover:bg-primary hover:text-on-primary transition-colors">Open</button>
+</div>
+</div>
+<!-- Card 3: Draft -->
+<div class="group bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 relative border border-transparent hover:border-primary/10">
+<div class="flex justify-between items-start mb-6">
+<div class="px-3 py-1 bg-surface-container-highest text-on-surface-variant rounded-full text-[10px] font-bold uppercase tracking-widest">Draft</div>
+<button class="text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Fintech Mobile App</h4>
+<p class="text-on-surface-variant text-sm mb-8 line-clamp-2">Peer-to-peer payment application focusing on micro-investing and automated savings rules.</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-xs text-on-surface-variant font-medium">Created Nov 18, 2023</span>
+<button class="bg-surface-container-high text-on-surface px-4 py-2 rounded-xl text-sm font-semibold hover:bg-primary hover:text-on-primary transition-colors">Open</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 'How It Works' Section -->
+<section class="mb-16">
+<div class="bg-surface-container-low rounded-2xl p-10 md:p-16">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<h3 class="text-3xl font-bold mb-4">How Speco Works</h3>
+<p class="text-on-surface-variant">Our editorial-driven AI process ensures high-quality documentation with minimal friction.</p>
+</div>
+<div class="relative">
+<!-- Connecting Line -->
+<div class="absolute top-8 left-0 w-full h-0.5 bg-outline-variant/30 hidden md:block"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest shadow-lg flex items-center justify-center text-primary mb-6 relative z-10 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="text-xl font-bold">01</span>
+</div>
+<h5 class="text-lg font-bold mb-2">Create Project</h5>
+<p class="text-sm text-on-surface-variant leading-relaxed">Name your vision and set primary goals.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest shadow-lg flex items-center justify-center text-primary mb-6 relative z-10 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="text-xl font-bold">02</span>
+</div>
+<h5 class="text-lg font-bold mb-2">AI Generates Modules</h5>
+<p class="text-sm text-on-surface-variant leading-relaxed">Our AI proposes the core technical modules.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest shadow-lg flex items-center justify-center text-primary mb-6 relative z-10 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="text-xl font-bold">03</span>
+</div>
+<h5 class="text-lg font-bold mb-2">Answer Questions</h5>
+<p class="text-sm text-on-surface-variant leading-relaxed">Refine details through targeted AI queries.</p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest shadow-lg flex items-center justify-center text-primary mb-6 relative z-10 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+<span class="text-xl font-bold">04</span>
+</div>
+<h5 class="text-lg font-bold mb-2">Get Your FRD</h5>
+<p class="text-sm text-on-surface-variant leading-relaxed">Download your complete requirements document.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Bento Grid (Additional Value) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-12">
+<div class="md:col-span-2 bg-primary text-on-primary p-10 rounded-2xl relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="text-2xl font-bold mb-2">Documentation Strength</h4>
+<p class="text-primary-fixed/80 mb-8 max-w-sm">Your projects are scoring 92% higher in clarity than industry averages.</p>
+<div class="flex items-end gap-1">
+<div class="w-8 bg-on-primary/20 h-12 rounded-t-lg"></div>
+<div class="w-8 bg-on-primary/40 h-20 rounded-t-lg"></div>
+<div class="w-8 bg-on-primary/60 h-28 rounded-t-lg"></div>
+<div class="w-8 bg-on-primary h-40 rounded-t-lg"></div>
+<div class="w-8 bg-on-primary/80 h-32 rounded-t-lg"></div>
+</div>
+</div>
+<div class="absolute -right-12 -bottom-12 w-64 h-64 bg-primary-container rounded-full opacity-50 blur-3xl"></div>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-2xl flex flex-col justify-between border border-outline-variant/10">
+<div>
+<h4 class="text-on-surface-variant text-sm font-bold uppercase tracking-widest mb-4">Time Saved</h4>
+<span class="text-5xl font-bold text-on-surface">124<span class="text-primary">h</span></span>
+</div>
+<p class="text-on-surface-variant text-sm mt-4">Total estimated hours saved across 12 projects using Speco curator.</p>
+</div>
+</section>
+</main>
+<!-- FAB (Suppressed based on context rules - not needed for this complex dashboard view) -->
+</body></html>

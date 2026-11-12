@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#b6b4ff",
+                    "surface-container": "#eaeef2",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#ffd2be",
+                    "on-secondary-fixed": "#140f54",
+                    "on-tertiary-fixed": "#351000",
+                    "tertiary": "#7e3000",
+                    "outline": "#777587",
+                    "primary-container": "#4f46e5",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#454386",
+                    "secondary-fixed-dim": "#c3c0ff",
+                    "secondary": "#58579b",
+                    "surface-variant": "#dfe3e7",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#4d44e3",
+                    "inverse-surface": "#2c3134",
+                    "surface-dim": "#d6dade",
+                    "outline-variant": "#c7c4d8",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#c3c0ff",
+                    "tertiary-fixed": "#ffdbcc",
+                    "surface-container-low": "#f0f4f8",
+                    "on-background": "#171c1f",
+                    "on-primary-fixed-variant": "#3323cc",
+                    "primary-fixed": "#e2dfff",
+                    "primary": "#3525cd",
+                    "on-secondary-fixed-variant": "#413f82",
+                    "tertiary-fixed-dim": "#ffb695",
+                    "on-primary-container": "#dad7ff",
+                    "inverse-on-surface": "#edf1f5",
+                    "on-surface": "#171c1f",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#7b2f00",
+                    "on-surface-variant": "#464555",
+                    "tertiary-container": "#a44100",
+                    "background": "#f6fafe",
+                    "surface-container-highest": "#dfe3e7",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#e4e9ed",
+                    "surface": "#f6fafe",
+                    "surface-bright": "#f6fafe",
+                    "secondary-fixed": "#e2dfff",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "on-primary-fixed": "#0f0069",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .no-line-rule { border: none !important; }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- SideNavBar Shell -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#f0f4f8] dark:bg-slate-900 flex flex-col p-4 gap-2 border-r-0 z-[60] hidden md:flex">
+<div class="px-4 py-6 mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">deployed_code</span>
+</div>
+<div>
+<h2 class="text-lg font-bold text-[#171c1f] leading-tight">Project Alpha</h2>
+<p class="text-xs text-on-surface-variant opacity-70">Active Specification</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 text-[#464555] dark:text-slate-400 hover:bg-[#dfe3e7] dark:hover:bg-slate-800 rounded-xl transition-all duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#464555] dark:text-slate-400 hover:bg-[#dfe3e7] dark:hover:bg-slate-800 rounded-xl transition-all duration-200" href="#">
+<span class="material-symbols-outlined">extension</span>
+<span class="text-sm font-medium">Modules</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-800 text-[#3525cd] dark:text-[#4f46e5] rounded-xl shadow-sm translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">quiz</span>
+<span class="text-sm font-medium">Requirements</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#464555] dark:text-slate-400 hover:bg-[#dfe3e7] dark:hover:bg-slate-800 rounded-xl transition-all duration-200" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="text-sm font-medium">FRD Generator</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#464555] dark:text-slate-400 hover:bg-[#dfe3e7] dark:hover:bg-slate-800 rounded-xl transition-all duration-200" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="text-sm font-medium">History</span>
+</a>
+</nav>
+<div class="mt-auto flex flex-col gap-1 pt-4 border-t border-surface-variant/30">
+<button class="mb-4 w-full py-3 bg-primary text-white rounded-xl font-semibold text-sm flex items-center justify-center gap-2 shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">
+<span class="material-symbols-outlined text-sm">add</span>
+                New Project
+            </button>
+<a class="flex items-center gap-3 px-4 py-2 text-[#464555] dark:text-slate-400 hover:bg-[#dfe3e7] rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="text-sm font-medium">Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-[#464555] dark:text-slate-400 hover:bg-[#dfe3e7] rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-sm font-medium">Account</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Wrapper -->
+<div class="md:ml-64 flex flex-col min-h-screen">
+<!-- TopNavBar Shell -->
+<header class="fixed top-0 right-0 left-0 md:left-64 z-50 bg-[#f6fafe]/80 dark:bg-slate-950/80 backdrop-blur-md h-16 flex justify-between items-center px-8 w-full max-w-full no-line-rule">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tight text-[#171c1f] dark:text-slate-100">Speco</span>
+<div class="hidden lg:flex items-center gap-6">
+<a class="text-sm font-semibold text-[#3525cd] dark:text-[#4f46e5] border-b-2 border-[#3525cd] py-5" href="#">Questionnaire</a>
+<a class="text-sm font-medium text-[#464555] dark:text-slate-400 hover:text-[#171c1f] transition-colors" href="#">Documentation</a>
+<a class="text-sm font-medium text-[#464555] dark:text-slate-400 hover:text-[#171c1f] transition-colors" href="#">Resources</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-[#f0f4f8] rounded-full transition-colors duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-[#f0f4f8] rounded-full transition-colors duration-200">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-surface-variant">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="Professional headshot of a software engineer in a clean modern office setting with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXLZcsNDqlfVUY0Ei22lBUka_PndXCWVct3_kk8Lqx2INtxwTZFOzUZtJspjNjNN1hhOIUsPxnVkyXr4TY785vpybS2AsMmFm_8YxJYy4A-Z5WUmMYwt5D8Y6_gbPwx5X01M9M0a5oLJeCG9IjwsRvZuSCTOEKph2qciFLnkK8KAXfuhle-CK6MpGiWem-VVLumy0AXKNMXyHPL5vHV3mNIwtqLYFD_iEru9KbqHyqVk0_WGI2hruzvTSEFvZgDRGF71yNSfcyXsw"/>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="mt-16 p-8 flex-1">
+<div class="max-w-6xl mx-auto">
+<!-- Hero Section -->
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-2xl">
+<span class="text-primary font-semibold text-sm tracking-widest uppercase mb-3 block">Specification Engine</span>
+<h1 class="text-[3.5rem] font-bold leading-[1.1] text-on-background tracking-tight mb-4">Requirements Questionnaire</h1>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                            Define your project's technical DNA. Complete the curated modules below to generate a comprehensive functional requirements document.
+                        </p>
+</div>
+<div class="flex gap-3">
+<button class="px-6 py-3 bg-surface-container-high text-on-surface rounded-xl font-semibold text-sm flex items-center gap-2 hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+                            Regenerate Questions
+                        </button>
+<button class="px-6 py-3 bg-surface-container-high text-on-surface rounded-xl font-semibold text-sm flex items-center gap-2 hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+                            Configure Questions
+                        </button>
+</div>
+</div>
+<!-- Bento Grid Progress Section -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-12">
+<!-- Progress Summary Card -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-[1.5rem] p-8 shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -mr-20 -mt-20 blur-3xl group-hover:bg-primary/10 transition-colors"></div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-8">
+<div>
+<p class="text-sm font-medium text-on-surface-variant uppercase tracking-wider mb-1">Total Completion</p>
+<h3 class="text-4xl font-bold text-on-surface">32% <span class="text-lg font-normal text-on-surface-variant">/ 100%</span></h3>
+</div>
+<div class="px-4 py-2 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-xs font-bold uppercase tracking-widest">
+                                    In Progress
+                                </div>
+</div>
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden mb-4">
+<div class="h-full bg-primary w-[32%] rounded-full shadow-[0_0_12px_rgba(53,37,205,0.4)]"></div>
+</div>
+<p class="text-sm text-on-surface-variant">48 of 150 questions answered across 6 modules.</p>
+</div>
+<div class="mt-8 pt-8 border-t border-surface-container flex gap-12 relative z-10">
+<div>
+<p class="text-2xl font-bold">12</p>
+<p class="text-xs text-on-surface-variant uppercase font-medium">Pending</p>
+</div>
+<div>
+<p class="text-2xl font-bold text-primary">36</p>
+<p class="text-xs text-on-surface-variant uppercase font-medium">Completed</p>
+</div>
+<div>
+<p class="text-2xl font-bold">2.4h</p>
+<p class="text-xs text-on-surface-variant uppercase font-medium">Est. Remaining</p>
+</div>
+</div>
+</div>
+<!-- Start Call-to-Action Card -->
+<div class="md:col-span-4 bg-primary rounded-[1.5rem] p-8 shadow-xl shadow-primary/20 flex flex-col text-white relative overflow-hidden">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<img class="w-full h-full object-cover" data-alt="Abstract 3D digital nodes and connections with soft purple and blue neon lighting on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBbPbpC1I4JWJnNZeIUChTokzcODEgcdZKlYXG-548MxBXMKUd6vUASNvgAR1R-OAYmWoODllSfU9VCKOUzU8Yn28QpqDAb1YqMNJifYB2HmaYBBJuyvcSIMu19GgMaTZTf70LszZKY4DpMBJ2eHnnkqvXeJyt9Q2ggzdvF89irLiidKZ1S_RdfjlLRIWJ76TOeX45XmiyXzdG4e4xPEEFy_6rAOPz9VPcD01AzpdDwvyxlX84vbkiY--Dp3ua9apvFCL5VZ6vAhE"/>
+</div>
+<div class="relative z-10 h-full flex flex-col">
+<h3 class="text-2xl font-bold mb-4">Ready to refine?</h3>
+<p class="text-on-primary-container text-sm leading-relaxed mb-auto">
+                                Continue where you left off in the "User Authentication" module to finalize your security requirements.
+                            </p>
+<button class="mt-8 w-full py-4 bg-white text-primary rounded-xl font-bold text-lg hover:bg-on-primary-container transition-all flex items-center justify-center gap-2 group">
+                                Start Questionnaire
+                                <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Modules Section -->
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-2xl font-bold text-on-surface">Questionnaire Modules</h2>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-surface-container rounded-lg text-on-surface-variant">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+<button class="p-2 hover:bg-surface-container rounded-lg text-on-surface-variant">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Module Card 1: Completed -->
+<div class="bg-surface-container-lowest rounded-[1.5rem] p-6 hover:shadow-md transition-shadow cursor-pointer group">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-primary-fixed text-primary rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">architecture</span>
+</div>
+<span class="material-symbols-outlined text-green-500" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h4 class="text-lg font-bold mb-1">Core Infrastructure</h4>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-2">Database preferences, cloud providers, and scalability targets.</p>
+<div class="flex items-center justify-between text-xs font-semibold text-on-surface-variant uppercase tracking-wider">
+<span>25/25 Answered</span>
+<span class="text-green-600">Complete</span>
+</div>
+</div>
+<!-- Module Card 2: In Progress -->
+<div class="bg-surface-container-lowest rounded-[1.5rem] p-6 border-2 border-primary/10 shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 left-0 h-1 bg-primary w-[65%]"></div>
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-primary text-white rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shield_person</span>
+</div>
+<span class="text-[10px] bg-primary-fixed px-2 py-1 rounded-full text-primary font-bold uppercase">Active</span>
+</div>
+<h4 class="text-lg font-bold mb-1 text-on-surface">User Authentication</h4>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-2">OAuth protocols, role-based access control, and session management.</p>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between text-xs font-semibold text-on-surface-variant uppercase tracking-wider">
+<span>18/32 Answered</span>
+<span class="text-primary">65%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full">
+<div class="h-full bg-primary w-[65%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Module Card 3: Not Started -->
+<div class="bg-surface-container-lowest/50 rounded-[1.5rem] p-6 border border-dashed border-surface-variant group hover:bg-surface-container-lowest hover:border-solid transition-all">
+<div class="flex justify-between items-start mb-6 opacity-60 group-hover:opacity-100">
+<div class="w-12 h-12 bg-surface-container-high text-on-surface-variant rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="material-symbols-outlined text-surface-variant">lock</span>
+</div>
+<h4 class="text-lg font-bold mb-1 opacity-60 group-hover:opacity-100">Payment Processing</h4>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-2 opacity-60 group-hover:opacity-100">Stripe integration, subscription logic, and invoicing requirements.</p>
+<div class="flex items-center justify-between text-xs font-semibold text-on-surface-variant uppercase tracking-wider opacity-60 group-hover:opacity-100">
+<span>0/15 Answered</span>
+<span>Pending</span>
+</div>
+</div>
+<!-- Module Card 4: Not Started -->
+<div class="bg-surface-container-lowest/50 rounded-[1.5rem] p-6 border border-dashed border-surface-variant group hover:bg-surface-container-lowest hover:border-solid transition-all">
+<div class="flex justify-between items-start mb-6 opacity-60 group-hover:opacity-100">
+<div class="w-12 h-12 bg-surface-container-high text-on-surface-variant rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined">api</span>
+</div>
+<span class="material-symbols-outlined text-surface-variant">lock</span>
+</div>
+<h4 class="text-lg font-bold mb-1 opacity-60 group-hover:opacity-100">API Documentation</h4>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-2 opacity-60 group-hover:opacity-100">Swagger/OpenAPI definitions, rate limiting, and webhooks.</p>
+<div class="flex items-center justify-between text-xs font-semibold text-on-surface-variant uppercase tracking-wider opacity-60 group-hover:opacity-100">
+<span>0/40 Answered</span>
+<span>Pending</span>
+</div>
+</div>
+<!-- Module Card 5: Not Started -->
+<div class="bg-surface-container-lowest/50 rounded-[1.5rem] p-6 border border-dashed border-surface-variant group hover:bg-surface-container-lowest hover:border-solid transition-all">
+<div class="flex justify-between items-start mb-6 opacity-60 group-hover:opacity-100">
+<div class="w-12 h-12 bg-surface-container-high text-on-surface-variant rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined">settings_suggest</span>
+</div>
+<span class="material-symbols-outlined text-surface-variant">lock</span>
+</div>
+<h4 class="text-lg font-bold mb-1 opacity-60 group-hover:opacity-100">Advanced Logic</h4>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-2 opacity-60 group-hover:opacity-100">Custom business rules, edge cases, and algorithmic complexity.</p>
+<div class="flex items-center justify-between text-xs font-semibold text-on-surface-variant uppercase tracking-wider opacity-60 group-hover:opacity-100">
+<span>0/22 Answered</span>
+<span>Pending</span>
+</div>
+</div>
+<!-- Empty State / Add Card -->
+<div class="bg-transparent border-2 border-dashed border-surface-variant rounded-[1.5rem] p-6 flex flex-col items-center justify-center text-center group hover:bg-white/50 transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-full border border-surface-variant flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-surface-variant">add</span>
+</div>
+<p class="text-sm font-bold text-on-surface-variant">Add Custom Module</p>
+<p class="text-xs text-on-surface-variant opacity-60">Extend the questionnaire</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Mobile Navigation Shell -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white/80 backdrop-blur-md flex items-center justify-around px-4 z-[100] no-line-rule shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
+<button class="flex flex-col items-center gap-1 text-[#464555]">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#3525cd]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">quiz</span>
+<span class="text-[10px] font-bold">Survey</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#464555]">
+<span class="material-symbols-outlined">description</span>
+<span class="text-[10px] font-medium">Docs</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#464555]">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</nav>
+</body></html>

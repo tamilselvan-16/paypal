@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#b6b4ff",
+                        "surface-container": "#eaeef2",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#ffd2be",
+                        "on-secondary-fixed": "#140f54",
+                        "on-tertiary-fixed": "#351000",
+                        "tertiary": "#7e3000",
+                        "outline": "#777587",
+                        "primary-container": "#4f46e5",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#454386",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "secondary": "#58579b",
+                        "surface-variant": "#dfe3e7",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#4d44e3",
+                        "inverse-surface": "#2c3134",
+                        "surface-dim": "#d6dade",
+                        "outline-variant": "#c7c4d8",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#c3c0ff",
+                        "tertiary-fixed": "#ffdbcc",
+                        "surface-container-low": "#f0f4f8",
+                        "on-background": "#171c1f",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "primary-fixed": "#e2dfff",
+                        "primary": "#3525cd",
+                        "on-secondary-fixed-variant": "#413f82",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "on-primary-container": "#dad7ff",
+                        "inverse-on-surface": "#edf1f5",
+                        "on-surface": "#171c1f",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#7b2f00",
+                        "on-surface-variant": "#464555",
+                        "tertiary-container": "#a44100",
+                        "background": "#f6fafe",
+                        "surface-container-highest": "#dfe3e7",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e4e9ed",
+                        "surface": "#f6fafe",
+                        "surface-bright": "#f6fafe",
+                        "secondary-fixed": "#e2dfff",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "on-primary-fixed": "#0f0069",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#f0f4f8] dark:bg-slate-900 flex flex-col p-4 gap-2 z-50">
+<div class="flex items-center gap-3 px-3 py-6 mb-4">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+</div>
+<div>
+<h2 class="text-lg font-bold text-[#171c1f] leading-tight">Project Alpha</h2>
+<p class="text-xs font-medium text-on-surface-variant">Active Specification</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-[#464555] dark:text-slate-400 hover:bg-[#dfe3e7] dark:hover:bg-slate-800 rounded-xl transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Overview</span>
+</a>
+<!-- Active State: Modules -->
+<a class="flex items-center gap-3 px-4 py-3 text-sm font-semibold bg-white dark:bg-slate-800 text-[#3525cd] dark:text-[#4f46e5] rounded-xl shadow-sm translate-x-1 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="extension">extension</span>
+<span>Modules</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-[#464555] dark:text-slate-400 hover:bg-[#dfe3e7] dark:hover:bg-slate-800 rounded-xl transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="quiz">quiz</span>
+<span>Requirements</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-[#464555] dark:text-slate-400 hover:bg-[#dfe3e7] dark:hover:bg-slate-800 rounded-xl transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span>FRD Generator</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-[#464555] dark:text-slate-400 hover:bg-[#dfe3e7] dark:hover:bg-slate-800 rounded-xl transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span>History</span>
+</a>
+</nav>
+<div class="mt-auto space-y-1">
+<button class="w-full mb-6 bg-primary text-white py-3 px-4 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span>New Project</span>
+</button>
+<a class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-[#464555] dark:text-slate-400 hover:bg-[#dfe3e7] dark:hover:bg-slate-800 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-[#464555] dark:text-slate-400 hover:bg-[#dfe3e7] dark:hover:bg-slate-800 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span>Account</span>
+</a>
+</div>
+</aside>
+<!-- Main Canvas Area -->
+<main class="ml-64 min-h-screen">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-64 right-0 h-16 bg-[#f6fafe]/80 dark:bg-slate-950/80 backdrop-blur-md flex justify-between items-center px-8 z-40">
+<div class="flex items-center gap-4">
+<span class="text-xl font-bold tracking-tight text-[#171c1f] dark:text-slate-100">Speco</span>
+<div class="h-4 w-[1px] bg-outline-variant mx-2"></div>
+<nav class="flex gap-6">
+<a class="text-sm font-semibold text-[#3525cd] border-b-2 border-[#3525cd] py-1" href="#">Modules</a>
+<a class="text-sm font-medium text-[#464555] hover:text-[#171c1f] py-1" href="#">Drafts</a>
+<a class="text-sm font-medium text-[#464555] hover:text-[#171c1f] py-1" href="#">Team</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-[#f0f4f8] rounded-full transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 hover:bg-[#f0f4f8] rounded-full transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<img alt="User profile" class="w-8 h-8 rounded-full border border-outline-variant/30" data-alt="Professional headshot of a woman with a confident smile in a bright studio setting, high-end photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGuH3xQlfCgNSK5HDGxkF_XMnWsw_YcuL-GCLNKMcgGjffHKzU2UMY7m-1EnGMP1IBFZVO15fYgrXLeyA2wF4Ot__Kw0Nq0u-NAktpgCs6oY-lstLqs2H3bDxPZ4-EgDDK9HJYs930B_SXsIRdveS6xgiXkyCPEeQrTRTvsMXhA7s02UjW0b8mWZbDbN9KNLm2Jvc2kZfIct96FqVqPJgR1611V059JB_N06JBAz11mgVy6dKRTVIKuwO6XaTaZrsFGLJCEiFjtsM"/>
+</div>
+</header>
+<!-- Page Content -->
+<div class="pt-24 px-12 pb-12">
+<!-- Hero Header Section -->
+<div class="max-w-6xl mx-auto mb-12 flex justify-between items-end">
+<div>
+<span class="text-[0.75rem] font-medium tracking-[0.05em] uppercase text-primary mb-2 block">Project Configurator</span>
+<h1 class="text-[2.5rem] font-bold text-on-surface tracking-tight leading-none mb-4">Project Modules</h1>
+<p class="text-[1rem] text-on-surface-variant max-w-xl">
+                        Define the core functionality for Project Alpha. Our AI has curated these modules based on your initial scope. Select and refine to generate your technical requirements.
+                    </p>
+</div>
+<div class="flex gap-4">
+<button class="bg-surface-container-high text-on-surface px-6 py-3 rounded-xl font-semibold flex items-center gap-2 hover:bg-surface-container-highest transition-all">
+<span class="material-symbols-outlined" data-icon="refresh">refresh</span>
+                        Regenerate
+                    </button>
+<button class="bg-primary text-white px-8 py-3 rounded-xl font-semibold shadow-lg shadow-primary/20 hover:translate-y-[-2px] transition-all flex items-center gap-2">
+<span>Start Questionnaire</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Bento Grid of Modules -->
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1: Reporting & Analytics -->
+<div class="bg-surface-container-lowest p-8 rounded-xl group hover:shadow-xl hover:shadow-on-surface/5 transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+</div>
+<div class="w-12 h-12 bg-primary-fixed rounded-xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined" data-icon="bar_chart">bar_chart</span>
+</div>
+<h3 class="text-xl font-semibold mb-3">Reporting &amp; Analytics</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                        Custom dashboards, real-time KPI tracking, and automated PDF export engine for stakeholder reports.
+                    </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-low rounded-full text-[10px] font-bold tracking-wider uppercase text-on-surface-variant">High Priority</span>
+<span class="px-3 py-1 bg-surface-container-low rounded-full text-[10px] font-bold tracking-wider uppercase text-on-surface-variant">Core</span>
+</div>
+</div>
+<!-- Card 2: Service Management -->
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-primary/20 shadow-md transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="w-12 h-12 bg-primary-fixed rounded-xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined" data-icon="home_repair_service">home_repair_service</span>
+</div>
+<h3 class="text-xl font-semibold mb-3">Service Management</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                        Ticketing system integration, SLA monitoring, and automated dispatch logic for field technicians.
+                    </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-primary-fixed rounded-full text-[10px] font-bold tracking-wider uppercase text-primary">Active</span>
+<span class="px-3 py-1 bg-surface-container-low rounded-full text-[10px] font-bold tracking-wider uppercase text-on-surface-variant">External API</span>
+</div>
+</div>
+<!-- Card 3: User Management -->
+<div class="bg-surface-container-lowest p-8 rounded-xl group hover:shadow-xl hover:shadow-on-surface/5 transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+</div>
+<div class="w-12 h-12 bg-primary-fixed rounded-xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined" data-icon="person_search">person_search</span>
+</div>
+<h3 class="text-xl font-semibold mb-3">User Management</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                        RBAC (Role Based Access Control), SSO integration (Okta/Azure), and multi-factor authentication.
+                    </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-low rounded-full text-[10px] font-bold tracking-wider uppercase text-on-surface-variant">Security</span>
+<span class="px-3 py-1 bg-surface-container-low rounded-full text-[10px] font-bold tracking-wider uppercase text-on-surface-variant">Mandatory</span>
+</div>
+</div>
+<!-- Card 4: Inventory Control -->
+<div class="bg-surface-container-lowest p-8 rounded-xl group hover:shadow-xl hover:shadow-on-surface/5 transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+</div>
+<div class="w-12 h-12 bg-primary-fixed rounded-xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+</div>
+<h3 class="text-xl font-semibold mb-3">Inventory Control</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                        Real-time stock tracking across multiple warehouses with low-threshold auto-ordering.
+                    </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-low rounded-full text-[10px] font-bold tracking-wider uppercase text-on-surface-variant">Logistics</span>
+</div>
+</div>
+<!-- Card 5: AI Insights -->
+<div class="bg-gradient-to-br from-primary to-primary-container p-8 rounded-xl text-white shadow-xl relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-9xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-white mb-6">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h3 class="text-xl font-semibold mb-3">AI Insights Engine</h3>
+<p class="text-sm text-white/80 leading-relaxed mb-6">
+                        Predictive maintenance alerts and automated demand forecasting powered by Speco Intelligence.
+                    </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-white/20 rounded-full text-[10px] font-bold tracking-wider uppercase text-white">Recommended</span>
+<span class="px-3 py-1 bg-white/20 rounded-full text-[10px] font-bold tracking-wider uppercase text-white">Beta</span>
+</div>
+</div>
+<!-- Card 6: Add New Module (Empty State/CTA) -->
+<button class="border-2 border-dashed border-outline-variant p-8 rounded-xl flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low hover:border-primary transition-all group">
+<div class="w-12 h-12 rounded-full flex items-center justify-center border border-outline-variant mb-4 group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</div>
+<span class="text-sm font-semibold">Add Custom Module</span>
+<span class="text-[10px] text-on-surface-variant/60 mt-1">Define bespoke project requirements</span>
+</button>
+</div>
+<!-- Contextual Footer Message -->
+<div class="max-w-6xl mx-auto mt-16 p-8 bg-surface-container rounded-xl flex items-center gap-6">
+<div class="flex-shrink-0 w-16 h-16 rounded-full overflow-hidden">
+<img alt="Project Lead" class="w-full h-full object-cover" data-alt="Professional portrait of an AI solutions architect, calm and helpful expression, high-end editorial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7sfITAb2F52RX8cqi2LNRQ6Wmau8q0iDR-Ozfvu2cdsli0UaNG4geD14zwWQv2QfW87uZR5DwGE53M1IKrtoUbmi1YGjpMTGDSA6P1RnwLv8-BVzcOs9KWCs42lNGKdt7yP-GZEE4_-uIYLjYZNcDocdw54-YpdKgwE-qka0MhVY8g5IjOx0Qk7CMRyCFc2iWl_GIMcMU0dX6_zWF6Scs6YPT9G2dejlQKEuHKn-kdF3Xyzcec96m51X6NEGnsoWXusTIiBAXkn0"/>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Configuration Tip</h4>
+<p class="text-sm text-on-surface-variant">Adding the <span class="font-semibold text-primary">Service Management</span> module automatically includes standard API documentation for mobile field apps.</p>
+</div>
+<div class="ml-auto">
+<button class="text-primary font-semibold text-sm hover:underline">Learn more</button>
+</div>
+</div>
+</div>
+</main>
+<!-- FAB Suppression logic applied - Not rendered for Details/Settings screens -->
+</body></html>
